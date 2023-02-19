@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Helping Hand</title>
+    <style>
+        .headercontainer {
+            padding-top: 60px;
+            padding-left: 60px;
+        }
+
+        .imgcontainer1 {
+            height: 600px;
+            text-align: center;
+            margin-left: 70px;
+            margin-right: 70px;
+            margin-top: 30px;
+            padding: 400px;
+            background-image: url(/img/home-banner.jpg);
+            filter: opacity(25%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+
+        .imgcontainer2 {
+            height: 800px;
+            width: auto;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            margin-top: 5%;
+            background-image: url(/img/feature-bg.jpg);
+        }
+
+        .textcontainer1 {
+            position: relative;
+            color: solid black;
+            text-align: center;
+            top: -500px;
+            padding-bottom: -200px;
+            margin-bottom: -250px;
+        }
+
+        .threeboxcontainer {
+            display: inline-block;
+            height: 150px;
+            top: -35px;
+            padding-bottom: -400px;
+            margin-bottom: -450px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        .footercontainer {
+            width: auto;
+            background-color: rgb(0, 0, 69);
+            margin-left: 5%;
+            margin-right: 5%;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 50px;
+        }
+
+        #normalbox {
+            position: relative;
+            color: white;
+            background-color: rgb(41, 40, 40);
+            left: 70px;
+            height: 150px;
+            width: 400px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 90px;
+        }
+
+        #normalbox2 {
+            position: relative;
+            color: white;
+            background-color: rgb(41, 40, 40);
+            height: 150px;
+            width: 400px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 90px;
+        }
+
+        #coloredbox {
+            position: relative;
+            color: white;
+            background-color: rgb(0, 183, 255);
+            height: 150px;
+            width: 400px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 90px;
+        }
+
+        .container2 {
+            border: 2px solid red;
+            height: 450px;
+            width: 600px;
+        }
+
+        .container3 {
+            background-color: rgb(240, 235, 245);
+            height: 800px;
+            width: auto;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+        }
+
+        .volunteercontainer {
+            height: 1000px;
+            width: auto;
+            color: #fff;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            margin-top: 5%;
+            background-image: url(/img/volunteer-bg.jpg);
+            background-position: center center;
+        }
+
+        .formvolunteer {
+            width: 750px;
+            height: 700px;
+            position: absolute;
+            left: 350px;
+            top: 4400px;
+            padding: 70px;
+            background-color: rgb(0, 183, 255);
+            color: #fff;
+        }
+
+        .turquiosetowhite_btn {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: 1px solid rgb(0, 183, 255);
+            background: rgb(0, 183, 255);
+        }
+
+        .turquiosetowhite_btn:hover {
+            background: #fff;
+            color: rgb(0, 183, 255)
+        }
+
+        .whitetoturquoise_btn {
+            min-width: 130px;
+            height: 40px;
+            color: grey;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: 1px solid grey;
+            background: #fff;
+        }
+
+        .whitetoturquoise_btn:hover {
+            background: rgb(0, 183, 255);
+            color: #fff
+        }
+
+        .turquiosebtn {
+            color: rgb(0, 183, 255);
+
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            margin-right: 150px;
+        }
+
+        .navbar-items {
+            margin-right: 30px;
+        }
+
+        .language_dropdown {
+            height: 30px;
+            border: 1px solid #eeeeee;
+            border-radius: 0px;
+            line-height: 28px;
+            font-size: 12px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            padding-left: 19px;
+            padding-right: 36px;
+            color: #777777;
+            background: #f9f9ff;
+            margin-right: 5px;
+            margin-top: 8px;
+        }
+
+        body {
+            font-family: 'Poppins';
+        }
+    </style>
+
+<body>
+    <!-- Header code -->
+    <div class="headercontainer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="invert" class="bi bi-facebook"
+            viewBox="0 0 16 16">
+            <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+            viewBox="0 0 16 16">
+            <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+        </svg>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dribbble"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837zm3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.774 6.774 0 0 1-2.924 4.573z" />
+        </svg>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin-right: 300px;" fill="currentColor"
+            class="bi bi-behance" viewBox="0 0 16 16">
+            <path
+                d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z" />
+        </svg>
+
+        <select style="margin-left: 850px;" class="language_dropdown">
+            <option value="1">English</option>
+            <option value="2">Urdu</option>
+        </select>
+        <button style="margin-left: 10px;" class="whitetoturquoise_btn">My Account</button>
+        <button style="margin-left: 10px; margin-right:30px" class="turquiosetowhite_btn">Donate Now</button>
+    </div>
+    <hr>
+
+    <!-- Navbar code -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <img src="/img/logo.png" alt="helpinghandlogo" height="60px" margin-left: 20px style="margin-left: 72px;">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav navbar-nav">
+                <a style="color: rgb(0, 183, 255);" class="nav-item nav-link turquiosebtn navbar-items"
+                    href="#">Home</a>
+                <a class="nav-item nav-link navbar-items" href="#">About</a>
+                <a class="nav-item nav-link navbar-items" href="#">Events</a>
+                <a class="nav-item nav-link navbar-items" href="#">Features</a>
+                <a class="nav-item nav-link navbar-items" href="#">Gallery</a>
+                <a class="nav-item nav-link navbar-items" href="#">Blog</a>
+                <a class="nav-item nav-link navbar-items" href="#">Contact</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- First container code (Donate For The Poor Children) -->
+    <div class="imgcontainer1"></div>
+    <div class="textcontainer1">
+        <p style="font-size: 20px; font-weight:600">RAISE YOUR HELPING HANDS FOR THE POOR PEOPLE</p>
+        <p style="font-size: 55px; font-weight:bolder">Donate For The Poor Children</p>
+        <p style="font-size: 20px; font-weight:400">Hundreds of thousands of children experiencing or
+            witnessing assault <br>and other gender based violence.
+        </p>
+        <button class="turquiosetowhite_btn">Donate Now</button>
+        <button class="whitetoturquoise_btn">View Activity</button>
+    </div>
+
+    <!-- Second Container Code (Total Donations + Volume Reached + Happy Donators) -->
+    <div class="threeboxcontainer" id="normalbox">
+        <p style="font-size: 18px; font-weight:bold">TOTAL DONATION</p>
+        <p style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, praesentium.</p>
+    </div>
+    <div class="threeboxcontainer" id="coloredbox">
+        <p style="font-size: 18px; font-weight:bold">VOLUNTEER REACHED</p>
+        <p style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, praesentium.</p>
+    </div>
+    <div class="threeboxcontainer" id="normalbox2">
+        <p style="font-size: 18px; font-weight:bold">HAPPY DONATORS</p>
+        <p style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, praesentium.</p>
+    </div>
+
+    <!-- Third Container Code (Welcome to HelpingHand) -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <p style="font-size: 40px; font-weight:bold">Welcome to HelpingHand</p>
+                <p style="font-size: 15px;">Inappropriate behaviour is often laughed off as "boys will be boys," <br>
+                    women face higher conduct standards
+                    especially in the workplace. <br> That's why it's crucial that, as women, our behaviour on the job
+                    is <br>
+                    beyond reproach. inappropriate behaviour is often laughed. <br> <br> That's why it's crucial that,
+                    as women,
+                    our behaviour on the job is <br> beyond reproach. inappropriate behaviour is often laughed
+                    <br>inappropriate
+                    behaviour is often laughed off as "boys will be boys,"<br>women face higher.
+                </p>
+                <br>
+                <!-- 3 Cards -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div style="border: 1px solid rgb(150, 144, 144);" class="card-body">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-coin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+                                </svg>
+                                <h5 style="font-weight: bolder;" class="card-title">$2.5M</h5>
+                                <p class="card-text">Total Donation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div style="border: 1px solid rgb(150, 144, 144);" class="card-body">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-journals" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z" />
+                                    <path
+                                        d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z" />
+                                </svg>
+                                <h5 style="font-weight: bolder;" class="card-title">1465</h5>
+                                <p class="card-text">Total Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div style="border: 1px solid rgb(150, 144, 144);" class="card-body">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="current"
+                                    class="bi bi-people" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                                </svg>
+                                <h5 style="font-weight: bolder;" class="card-title">3965</h5>
+                                <p class="card-text">Total Volunteers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 offset-md-3">
+                <img src="/img/welcome-banner.png" alt="welcomebanner">
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Major Causes Container -->
+    <div class="container3">
+        <div class="row">
+            <p style="margin-top: 30px; font-weight:550; font-size: 30px; margin-top:20px;" align=center>Our Major
+                Causes</p>
+        </div>
+        <div class="row">
+            <p style="font-weight: lighter;" align=center>The French Revolution constituted for the conscience of the
+                dominant aristocratic class a fall from <br>
+                innocence, and upturning of the natural chain of events that resounded.</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="/img/causes/causes-1.jpg" alt="Cause img 1" width="150px"
+                        height="300px">
+                    <div style="padding: 30px;" class="card-body">
+                        <h5 class="card-title">Did not find your Package</h5>
+                        <p style="font-weight: lighter;" class="card-text">Inappropriate behaviour is often
+                            laughed<br>off as "boys will be boys," women face<br>higher conduct standards especially
+                            in<br>the workplace that's why it's cruicial.<br> <br></p>
+                        <div class="footer">
+                            <button style="width: auto" class="turquiosetowhite_btn"> Raised: $50,689</button>
+                            <button style="width: auto;" class="whitetoturquoise_btn"> Total Need: $500k</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="/img/causes/causes-2.jpg" alt="Cause img 2" width="150px"
+                        height="300px">
+                    <div style="padding: 30px;" class="card-body">
+                        <h5 class="card-title">Did not find your Package</h5>
+                        <p style="font-weight: lighter;" class="card-text">Inappropriate behaviour is often
+                            laughed<br>off as "boys will be boys," women face<br>higher conduct standards especially
+                            in<br>the workplace that's why it's cruicial.<br> <br></p>
+                        <div class="footer">
+                            <button style="width: auto" class="turquiosetowhite_btn"> Raised: $50,689</button>
+                            <button style="width: auto;" class="whitetoturquoise_btn"> Total Need: $500k</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="/img/causes/causes-3.jpg" alt="Cause img 3" width="150px"
+                        height="300px">
+                    <div style="padding: 30px;" class="card-body">
+                        <h5 class="card-title">Did not find your Package</h5>
+                        <p style="font-weight: lighter;" class="card-text">Inappropriate behaviour is often
+                            laughed<br>off as "boys will be boys," women face<br>higher conduct standards especially
+                            in<br>the workplace that's why it's cruicial.<br> <br></p>
+                        <div class="footer">
+                            <button style="width: auto" class="turquiosetowhite_btn"> Raised: $50,689</button>
+                            <button style="width: auto;" class="whitetoturquoise_btn"> Total Need: $500k</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Key Features Container -->
+    <div class="imgcontainer2">
+        <p style="font-weight:bolder; font-size:50px; color:#fff; padding-top: 5%;" align=center>Our Key Features</p>
+        <p style="font-weight:lighter ;color: #fff;" align=center>The French Revolution constituted for the conscience
+            of the dominant aristocratic class a fall from
+            <br>innocence, and upturning of the natural chain of events that resounded.
+        </p>
+        <br>
+        <br>
+        <div style="padding-left: 75px; padding-right: 75px; border-right:#777777;"
+            class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" align=center>Spread The Word</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. <br> Praesent
+                            nec accumsan risus. <br> Etiam vel viverra nunc, vel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" align=center>Make Donations </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. <br> Praesent
+                            nec accumsan risus. <br> Etiam vel viverra nunc, vel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" align=center>Make People Happy</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. <br> Praesent
+                            nec accumsan risus. <br> Etiam vel viverra nunc, vel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" align=center>Adopt A Child</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. <br> Praesent
+                            nec accumsan risus. <br> Etiam vel viverra nunc, vel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h5 class="card-title" align=center>Sponsor Needy</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. <br> Praesent
+                            nec accumsan risus. <br> Etiam vel viverra nunc, vel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" align=center>Volunteer Now</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. <br> Praesent
+                            nec accumsan risus. <br> Etiam vel viverra nunc, vel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Upcoming Events and then 2 cards -->
+    <p style="font-weight:bold ;font-size: 40px;" align=center>Upcoming Events</p>
+    <p style="font-weight: lighter;" align=center>if you are a serious anstronomy fanatic like a lot of us are, you can
+        probably <br> remember that one event in childhood that started.</p>
+
+    <div class="container bcontent">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 600px;">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5">
+                            <img class="card-img" src="/img/events/event-1.jpg" alt="first event img" height="270px">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <p style="font-weight:lighter ;font-size: small;"></p> 25th February, 2017
+                                <br>
+                                <h5 style="padding-top: 15px;" class="card-title">The Universe <br> Through A Childs
+                                    <br>Eyes
+                                </h5>
+                                <p style="padding-top:10px ;font-weight: lighter;" class="card-text">For most of us, the
+                                    idea of <br> anstronomy is something we
+                                    directly <br> connect to "stargazing", telescopes</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 600px;">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5">
+                            <img class="card-img" src="/img/events/event-2.jpg" alt="first event img" height="270px">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <p style="font-weight:lighter ;font-size: small;"></p> 25th February, 2017
+                                <br>
+                                <h5 style="padding-top: 15px;" class="card-title">The Universe <br> Through A Childs
+                                    <br>Eyes
+                                </h5>
+                                <p style="padding-top:10px ;font-weight: lighter;" class="card-text">For most of us, the
+                                    idea of <br> anstronomy is something we
+                                    directly <br> connect to "stargazing", telescopes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volunteer Yourself Container and Form -->
+    <div class="volunteercontainer">
+        <p style="padding-top:60px;font-weight:900; font-size: 60px;" align=center>Volunteer Yourself</p>
+        <p style="font-weight:500; font-size: 15px;" align=center>If you're a serious astronomy fanatic like a lot of us
+            are, you can probably <br> remember that one event in
+            childhood that started. </p>
+
+        <div class="formvolunteer">
+            <p style="font-weight:1200; font-size: 50px;">Become A Volunteer</p>
+            <p>It only takes a minute to set up a campaign. Decide what to do. Pick a name. Pick a photo. And just like
+                that, you'll be ready to start raising money. </p>
+            <br><br>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <select class="form-control">
+                            <option>Select</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="file" class="control-file" id="exampleFormControlFile1">
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <textarea class="form-control" rows="6" cols="1" placeholder="Enter your message"></textarea>
+                        <br>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button style="border: 1px solid white;" class="turquiosetowhite_btn">Apply Now</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Event Gallery -->
+    <p style="font-weight:900; font-size: 60px;" align=center>Event Gallery</p>
+    <p style="font-weight:100; font-size: 20px;" align=center>If you're a serious astronomy fanatic like a lot of us
+        are, you can probably <br> remember that one event in
+        childhood that started. </p>
+
+    <div class="container">
+        <div style="padding: 0%;" class="row">
+            <div style="padding: 0%;" class="col">
+                <img src="/img/gallery/g-1.jpg" alt="eventimg1" width=400px height=300px>
+            </div>
+            <div class="col">
+                <img src="/img/gallery/g-2.jpg" alt="eventimg2" width=400px height=300px>
+            </div>
+            <div class="col">
+                <img src="/img/gallery/g-3.jpg" alt="eventimg3" width=400px height=300px>
+            </div>
+        </div>
+
+        <div style="padding: 0%;" class="row">
+            <div style="padding: 0%;" class="col">
+                <img src="/img/gallery/g-4.jpg" alt="eventimg1" width=400px height=300px>
+            </div>
+            <div class="col">
+                <img src="/img/gallery/g-5.jpg" alt="eventimg2" width=400px height=300px>
+            </div>
+            <div class="col">
+                <img src="/img/gallery/g-6.jpg" alt="eventimg3" width=400px height=300px>
+            </div>
+        </div>
+
+        <div style="padding: 0%;" class="row">
+            <div style="padding: 0%;" class="col">
+                <img src="/img/gallery/g-7.jpg" alt="eventimg1" width=400px height=300px>
+            </div>
+            <div class="col">
+                <img src="/img/gallery/g-8.jpg" alt="eventimg2" width=400px height=300px>
+            </div>
+            <div class="col">
+                <img src="/img/gallery/g-9.jpg" alt="eventimg3" width=400px height=300px>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+    <!-- Testimonials -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p style="font-weight:600; font-size: 40px;">Testimonials <br> from our Donors</p>
+                <p style="font-weight: lighter;">Las Vegas has more than 100,000 hotel rooms <br> to choose from. There
+                    is something for every <br> budget,
+                    and enough. </p>
+            </div>
+
+            <div class="col">
+                <div align=center>
+                    <img src="/img/testimonial/testi-2.png" alt="Cordelia Barton">
+                </div>
+
+                <p style="margin-top: 60px; font-weight: lighter;" align=center>It won't be a bigger problem to find one
+                    video <br> game lover in your neighbor. Since the
+                    introduction <br> of Virtual Game, it has been achieving great <br> heights so far as it is. </p>
+                <p style="font-size: 20px;font-weight: bold;" align=center>Cordelia Barton</p>
+                <p style="font-weight: lighter;" align=center>CEO at Google</p>
+            </div>
+
+            <div class="col">
+                <div align=center>
+                    <img src="/img/testimonial/testi-2.png" alt="Cordelia Barton">
+                </div>
+
+                <p style="margin-top: 60px; font-weight: lighter;" align=center>It won't be a bigger problem to find one
+                    video <br> game lover in your neighbor. Since the
+                    introduction <br> of Virtual Game, it has been achieving great <br> heights so far as it is. </p>
+                <p style="font-size:20px;font-weight: bold;" align=center>Cordelia Barton</p>
+                <p style="font-weight: lighter;" align=center>CEO at Google</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- Footer -->
+    <div class="footercontainer">
+        <div class="row">
+            <div class="col">
+                <p style="font-weight:bold;font-size:large;color: #fff;">About Agency</p>
+                <p style="color: rgb(107, 107, 107);">The world has become so fast paced <br>that people want to stand
+                    by <br>reading a page of
+                    information, they<br>would much rather look at a <br>presentation and understand the <br> message.
+                    It has come to a point</p>
+            </div>
+            <div class="col">
+                <p style="font-weight:bold;font-size:large;color: #fff;">Navigation Links</p>
+                <p style="color: rgb(107, 107, 107);">Home
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Team <br>
+                    <br>Feature
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pricing
+                    <br><br>Services
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Blog
+                    <br><br>Portfolio
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact
+                </p>
+                <div class="col"></div>
+            </div>
+            <div class="col">
+                <p style="font-weight:bold;font-size:large;color: #fff;">Newsletter</p>
+                <p style="color: rgb(107, 107, 107);">For business professionals caught <br> between high OEM price and
+                    <br> mediocre print and graphic output.
+                </p>
+                <input type="email" class="form-control" placeholder="Email Address" style="color:rgb(107, 107, 107); background-color:rgb(0, 0, 69)" width="10px">
+            </div>
+            <div class="col">
+                <p style="font-weight:bold;font-size:large;color: #fff;">Instafeed</p>
+                <p style="color: rgb(107, 107, 107);"></p>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p style="color: rgb(107, 107, 107);">
+                        ____________________________________________________________________________________________________________________________
+                    </p>
+                    <p style="color: rgb(107, 107, 107);">Copyright &#169;2022 All Rights Reserved.</p>
+                </div>
+                
+                <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-facebook"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                        class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                        class="bi bi-dribbble" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837zm3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.774 6.774 0 0 1-2.924 4.573z" />
+                    </svg>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin-right: 10px;"
+                        fill="white" class="bi bi-behance" viewBox="0 0 16 16">
+                        <path
+                            d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
